@@ -1,0 +1,18 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+.btnRegistration {
+    -fx-background-color: #ed2d33;
+    -fx-text-fill:#FFFFFF;
+    -fx-background-radius:10px;
+}
+
+.btncancel {
+     -fx-background-color: #da5ae0;
+    -fx-text-fill:#FFFFFF;
+    -fx-background-radius:10px;
+}

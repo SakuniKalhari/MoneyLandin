@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="loginPane" prefHeight="550.0" prefWidth="600.0" styleClass="mainFxmlClass" stylesheets="@../stylesheet/attendance.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.moneylanding.controller.AttendanceController">
+   <children>
+      <Label layoutX="220.0" layoutY="26.0" text="Attendance" textFill="#020303">
+         <font>
+            <Font name="System Bold Italic" size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="90.0" layoutY="180.0" text="Date :" textFill="#1e1919">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="91.0" layoutY="247.0" text="Attendance :" textFill="#1e1919">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblattendance" layoutX="128.0" layoutY="337.0" onMouseClicked="#tblattendance" prefHeight="141.0" prefWidth="344.0">
+        <columns>
+          <TableColumn prefWidth="108.0" text="CLID" />
+          <TableColumn prefWidth="108.0" text="Date" />
+            <TableColumn prefWidth="127.0" text="Attendance" />
+        </columns>
+      </TableView>
+      <Label layoutX="90.0" layoutY="115.0" text="CLID :" textFill="#1e1919">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cmbid" layoutX="169.0" layoutY="111.0" onAction="#cmbid" prefHeight="25.0" prefWidth="186.0" />
+      <HBox fx:id="checkbox" alignment="CENTER_LEFT" layoutX="182.0" layoutY="242.0" prefHeight="28.0" prefWidth="161.0" spacing="10.0">
+         <children>
+            <JFXCheckBox fx:id="Yes" onAction="#handlYes" prefHeight="18.0" prefWidth="60.0" text="Yes" />
+            <JFXCheckBox fx:id="No" onAction="#handlNo" prefHeight="18.0" prefWidth="67.0" text="No" />
+         </children>
+      </HBox>
+      <JFXDatePicker fx:id="dateepc" layoutX="169.0" layoutY="175.0" onAction="#dateepc" prefHeight="28.0" prefWidth="186.0" />
+      <JFXButton fx:id="btnsave" layoutX="448.0" layoutY="256.0" onAction="#btnsave" prefHeight="28.0" prefWidth="72.0" style="-fx-background-color: #0088bc;" text="Save">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="110.0" fitWidth="114.0" layoutX="423.0" layoutY="97.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/man.png" />
+         </image>
+      </ImageView>
+      <Line endX="462.0" layoutX="124.0" layoutY="14.0" startX="-111.0" strokeWidth="3.0" />
+      <Line endX="462.0" layoutX="125.0" layoutY="536.0" startX="-111.0" strokeWidth="3.0" />
+      <Line endX="453.5" endY="-8.5" layoutX="134.0" layoutY="24.0" startX="454.5" startY="510.5" strokeWidth="3.0" />
+      <Line endX="453.5" endY="-8.5" layoutX="-440.0" layoutY="24.0" startX="454.5" startY="510.5" strokeWidth="3.0" />
+   </children>
+</AnchorPane>
